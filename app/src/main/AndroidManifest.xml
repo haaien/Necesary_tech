@@ -23,6 +23,7 @@
         <activity android:label="Necesary_tech" android:name=".TranceActivityEightPer" />
         <activity android:label="Necesary_tech" android:name=".TmpStab" />
         <activity android:label="Necesary_tech" android:name=".BlackoutActivity" />
+        <activity android:label="Necesary_tech" android:name=".SaveTextNumberActivity" />
     </application>
 
 </manifest>
