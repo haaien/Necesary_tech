@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         //ボタンを押したときに各テストへ遷移する
 
-        Button button1 = (Button) findViewById(R.id.button_trance_act);  //画面遷移ボタン
+        Button button1 = (Button) findViewById(R.id.button_trance_act);     //画面遷移ボタン
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,12 +26,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button_blackout);   //画面暗転ボタン
+        Button button2 = (Button) findViewById(R.id.button_blackout);       //画面暗転ボタン
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //インテントに、この画面と、遷移する別の画面を指定する
                 Intent intent = new Intent(getApplication(), BlackoutActivity.class);
+                //インテントで指定した別の画面に遷移する
+                startActivity(intent);
+            }
+        });
+
+        Button button3 = (Button) findViewById(R.id.button_save_points);    //文字数計算テストボタン
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //インテントに、この画面と、遷移する別の画面を指定する
+                Intent intent = new Intent(getApplication(), SaveTextNumberActivity.class);
                 //インテントで指定した別の画面に遷移する
                 startActivity(intent);
             }
